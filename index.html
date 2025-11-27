@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bike Tour – Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Reckless Neue from Transfonter -->
+  <link rel="stylesheet" href="stylesheet.css" />
+
+  <!-- Montserrat body font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --yellow: #ffc21a;
+      --red: #df1515;
+      --black: #000000;
+      --grey: #838383;
+      --light-bg: #fff9e8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+      color: var(--black);
+      background: #ffffff;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
+    }
+
+    /* ----------------- NAVBAR ----------------- */
+
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Reckless Neue";
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .logo span:first-child {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--yellow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--grey);
+    }
+
+    .nav-links a:hover {
+      color: var(--black);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      padding: 9px 20px;
+      border-radius: 999px;
+      border: none;
+      background: var(--red);
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 20px;
+      height: 2px;
+      background: var(--black);
+    }
+
+    /* ----------------- HERO ----------------- */
+
+    .hero-wrapper {
+      width: 100%;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 360px;
+      border-radius: 0 0 24px 24px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .page-main {
+      margin-top: 40px;
+    }
+
+    /* ----------------- TOURS INTRO + FILTERS ----------------- */
+
+    .hero-intro {
+      margin-bottom: 40px;
+    }
+
+    .hero-intro h1 {
+      font-family: "Reckless Neue";
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .hero-intro p {
+      max-width: 580px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--grey);
+      margin-bottom: 24px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 7px 18px;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      background: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .filter-btn--primary {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      font-weight: 600;
+    }
+
+    /* ----------------- TOUR CARDS ----------------- */
+
+    .tours-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .tour-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-card img {
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .tour-body {
+      padding: 16px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tour-meta {
+      font-size: 14px;
+      color: var(--grey);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tour-title {
+      font-family: "Reckless Neue";
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    .tour-location {
+      font-size: 14px;
+      color: var(--grey);
+    }
+
+    .tour-desc {
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.5;
+      margin-top: 2px;
+    }
+
+    .tour-footer {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    .tour-price span {
+      display: block;
+    }
+
+    .tour-price .old {
+      font-size: 14px;
+      text-decoration: line-through;
+      color: var(--grey);
+    }
+
+    .tour-price .new {
+      font-weight: 600;
+    }
+
+    .tour-price .per {
+      font-size: 14px;
+      color: var(--grey);
+    }
+
+    .tour-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .btn-pill {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      background: var(--yellow);
+      cursor: pointer;
+    }
+
+    .badge-green {
+      font-size: 14px;
+      color: #1a8f3a;
+    }
+
+    /* ----------------- FEATURED VIDEO SECTION ----------------- */
+
+    .feature-video {
+      margin-bottom: 56px;
+      background: var(--yellow);
+      border-radius: 24px;
+      padding: 32px 32px 36px;
+      display: grid;
+      grid-template-columns: 1.3fr 1.4fr;
+      gap: 28px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.1;
+      background-image: radial-gradient(circle at 1px 1px, #000 1px, transparent 0);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    .feature-left,
+    .feature-right {
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-eyebrow {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .feature-title {
+      font-family: "Reckless Neue";
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .feature-sub {
+      font-size: 14px;
+      color: #3a2a00;
+      max-width: 360px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .video-thumb {
+      border-radius: 16px;
+      background: #fff;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-thumb-inner {
+      width: 120px;
+      height: 80px;
+      border-radius: 18px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-circle::before {
+      content: "";
+      border-left: 12px solid #fff;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      margin-left: 4px;
+    }
+
+    /* ----------------- CTA BANNER ----------------- */
+
+    .cta-banner {
+      margin: 56px 0 40px;
+      padding: 18px 24px;
+      border-radius: 18px;
+      background: var(--light-bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .cta-banner p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* ----------------- TESTIMONIALS ----------------- */
+
+    .section-heading {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .section-heading span {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    .section-heading h2 {
+      font-family: "Reckless Neue";
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    .testimonials {
+      margin-bottom: 56px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .testimonial-header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .t-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .t-role {
+      font-size: 12px;
+      color: var(--grey);
+    }
+
+    .t-text {
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    .rating {
+      font-size: 14px;
+    }
+
+    .star {
+      color: #ffb400;
+      margin-right: 2px;
+    }
+
+    /* ----------------- TOUR GUIDES ----------------- */
+
+    .guides {
+      margin-bottom: 56px;
+      text-align: center;
+    }
+
+    .guides h2 {
+      font-family: "Reckless Neue";
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+      justify-items: center;
+    }
+
+    .guide-card {
+      text-align: center;
+    }
+
+    .guide-photo {
+      width: 160px;
+      height: 190px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 0 auto 12px;
+      object-fit: cover;
+    }
+
+    .guide-name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .guide-role {
+      font-size: 14px;
+      color: var(--grey);
+    }
+
+    /* ----------------- PARTNERS ----------------- */
+
+    .partners {
+      margin-bottom: 56px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .partner-logo {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid #eee;
+      font-size: 14px;
+      color: var(--grey);
+      background: #fff;
+    }
+
+    /* ----------------- FOOTER ----------------- */
+
+    footer {
+      margin-top: 40px;
+    }
+
+    .footer-hero {
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+    }
+
+    .footer-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer-main {
+      background: #111111;
+      color: #ffffff;
+      padding: 40px 16px 26px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-logo {
+      font-family: "Reckless Neue";
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #bbbbbb;
+      line-height: 1.7;
+    }
+
+    .footer-heading {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .footer-links {
+      font-size: 14px;
+      color: #bbbbbb;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 12px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+
+    /* ----------------- RESPONSIVE ----------------- */
+
+    @media (max-width: 992px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-image {
+        height: 280px;
+      }
+
+      .hero-intro h1 {
+        font-size: 40px;
+      }
+
+      .tours-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-video {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .guides-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.3fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-main {
+        margin-top: 28px;
+      }
+
+      .hero-intro h1 {
+        font-size: 34px;
+      }
+
+      .hero-intro p {
+        font-size: 14px;
+      }
+
+      .tours-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .feature-video {
+        padding: 24px 20px 26px;
+      }
+
+      .cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .guides-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      }
+
+      .footer-hero {
+        height: 210px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .logo {
+        font-size: 20px;
+      }
+
+      .hero-image {
+        height: 220px;
+      }
+
+      .hero-intro h1 {
+        font-size: 28px;
+      }
+
+      .guides-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <span>Bike</span>
+        <span>Tour</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#">Tours</a>
+        <a href="#">About</a>
+        <a href="#">Packages</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="nav-cta">
+        <button class="btn-primary">Book Now</button>
+        <div class="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <div class="hero-wrapper">
+    <div class="hero-image">
+      <img
+        src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg"
+        alt="Motorcycle riders in mountains"
+      />
+    </div>
+  </div>
+
+  <!-- MAIN PAGE CONTENT -->
+  <main class="page page-main">
+    <!-- Intro + Filters -->
+    <section class="hero-intro">
+      <h1>Best Motorcycle Tour Company in India</h1>
+      <p>
+        India Bike Tours is an India based company that has been providing fully guided
+        motorcycle adventure tours for over the past 7 years with our own team of riders
+        and tour leaders.
+      </p>
+
+      <div class="filters">
+        <button class="filter-btn filter-btn--primary">All Tours</button>
+        <button class="filter-btn">Nepal</button>
+        <button class="filter-btn">Rajasthan</button>
+        <button class="filter-btn">Himalayas</button>
+        <button class="filter-btn">South India</button>
+        <button class="filter-btn">Goa</button>
+      </div>
+    </section>
+
+    <!-- First Tours Grid -->
+    <section class="tours-grid">
+      <!-- card 1 -->
+      <article class="tour-card">
+        <img
+          src="https://images.pexels.com/photos/1226862/pexels-photo-1226862.jpeg"
+          alt="South India Bike Tour"
+        />
+        <div class="tour-body">
+          <div class="tour-meta">11 Day &amp; 10 Nights</div>
+          <h2 class="tour-title">South India Bike Tour</h2>
+          <p class="tour-location">📍 Kutch / Gujarat</p>
+          <p class="tour-desc">
+            Ride through the beautiful coastlines and ancient temples of South India with our
+            experienced tour guides.
+          </p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="old">$ 4,650</span>
+              <span class="new">$ 5,080</span>
+              <span class="per">per person</span>
+            </div>
+            <div class="tour-cta">
+              <button class="btn-pill">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- card 2 -->
+      <article class="tour-card">
+        <img
+          src="https://images.pexels.com/photos/1005666/pexels-photo-1005666.jpeg"
+          alt="Nepal Bike Tour"
+        />
+        <div class="tour-body">
+          <div class="tour-meta">11 Day &amp; 10 Nights</div>
+          <h2 class="tour-title">Nepal Bike Tour</h2>
+          <p class="tour-location">📍 Kathmandu / Pokhara</p>
+          <p class="tour-desc">
+            Explore the Himalayas, stunning valleys and ancient cities of Nepal on powerful
+            adventure bikes.
+          </p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="old">$ 4,650</span>
+              <span class="new">$ 4,080</span>
+              <span class="per">per person</span>
+            </div>
+            <div class="tour-cta">
+              <button class="btn-pill">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- card 3 -->
+      <article class="tour-card">
+        <img
+          src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg"
+          alt="Rajasthan Bike Tour"
+        />
+        <div class="tour-body">
+          <div class="tour-meta">11 Day &amp; 10 Nights</div>
+          <h2 class="tour-title">Rajasthan Bike Tour</h2>
+          <p class="tour-location">📍 Jodhpur / Udaipur</p>
+          <p class="tour-desc">
+            Ride across royal deserts, colourful towns and majestic forts of Rajasthan under
+            open skies.
+          </p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="old">$ 4,650</span>
+              <span class="new">$ 3,080</span>
+              <span class="per">per person</span>
+            </div>
+            <div class="tour-cta">
+              <button class="btn-pill">Book Now</button>
+              <span class="badge-green">Season Completed</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Featured Video Section -->
+    <section class="feature-video">
+      <div class="feature-pattern"></div>
+
+      <div class="feature-left">
+        <div class="feature-eyebrow">India Bike Tour Highlight Video</div>
+        <h2 class="feature-title">
+          Embracing the Unknown with India Bike Tour
+        </h2>
+        <p class="feature-sub">
+          Watch how our riders conquer changing terrains, connect with
+          local culture and enjoy every second of their adventure.
+        </p>
+        <button class="btn-pill">Book Now</button>
+      </div>
+
+      <div class="feature-right">
+        <div class="video-thumb">
+          <div class="video-thumb-inner">
+            <div class="play-circle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Tours Grid (repeat cards like design) -->
+    <section class="tours-grid">
+      <!-- same three cards again, just for layout -->
+      <article class="tour-card">
+        <img
+          src="https://images.pexels.com/photos/1226862/pexels-photo-1226862.jpeg"
+          alt="South India Bike Tour"
+        />
+        <div class="tour-body">
+          <div class="tour-meta">11 Day &amp; 10 Nights</div>
+          <h2 class="tour-title">South India Bike Tour</h2>
+          <p class="tour-location">📍 Kutch / Gujarat</p>
+          <p class="tour-desc">
+            Scenic beaches, spice plantations and hill stations all packed
+            into one unforgettable ride.
+          </p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="old">$ 4,650</span>
+              <span class="new">$ 5,080</span>
+              <span class="per">per person</span>
+            </div>
+
+
+
+
+
+
+
+    <!-- Testimonials -->
+    <!-- <section class="testimonials">
+      <div class="section-heading">
+        <span>Client Stories</span>
+        <h2>What our riders say</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">
+              <img
+                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+                alt="Client"
+              />
+            </div>
+            <div>
+              <div class="t-name">Claus-Gerhard David</div>
+              <div class="t-role">Germany • Solo Rider</div>
+            </div>
+          </div>
+          <p class="t-text">
+            “It was the perfect mix of adventure, culture and comfort.
+            The team handled every detail and made us feel safe at all times.”
+          </p>
+          <div class="rating">
+            <span class="star">★ ★ ★ ★ ★</span> 4.9 (1,265 reviews)
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">
+              <img
+                src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg"
+                alt="Client"
+              />
+            </div>
+            <div>
+              <div class="t-name">Michael Brown</div>
+              <div class="t-role">USA • Group Tour</div>
+            </div>
+          </div>
+          <p class="t-text">
+            “Roads, hotels and bikes – everything was superbly organised.
+            Highly recommend India Bike Tour for long distance rides.”
+          </p>
+          <div class="rating">
+            <span class="star">★ ★ ★ ★ ★</span> 4.8
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">
+              <img
+                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+                alt="Client"
+              />
+            </div>
+            <div>
+              <div class="t-name">Priya Sharma</div>
+              <div class="t-role">India • Himalayan Tour</div>
+            </div>
+          </div>
+          <p class="t-text">
+            “Our guide knew every hidden spot. Sunrises, chai stops and
+            breathtaking passes – unforgettable memories!”
+          </p>
+          <div class="rating">
+            <span class="star">★ ★ ★ ★ ★</span> 5.0
+          </div>
+        </article>
+      </div>
+    </section>
+
+  Tour Guides //
+    <section class="guides">
+      <h2>Meet our valuable team<br />Tour Guides</h2>
+
+      <div class="guides-grid">
+        <div class="guide-card">
+          <img
+            class="guide-photo"
+            src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+            alt="Guide"
+          />
+          <div class="guide-name">Sanjay</div>
+          <div class="guide-role">Senior Tour Operator</div>
+        </div>
+        <div class="guide-card">
+          <img
+            class="guide-photo"
+            src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
+            alt="Guide"
+          />
+          <div class="guide-name">Pedro Rivera</div>
+          <div class="guide-role">Tour Leader &amp; Rider</div>
+        </div>
+        <div class="guide-card">
+          <img
+            class="guide-photo"
+            src="https://images.pexels.com/photos/428364/pexels-photo-428364.jpeg"
+            alt="Guide"
+          />
+          <div class="guide-name">Aman Singh</div>
+          <div class="guide-role">Expedition Specialist</div>
+        </div>
+      </div>
+    </section>
+
+    //  Partners
+    <section class="partners">
+      <div class="partner-logo">Royal Enfield</div>
+      <div class="partner-logo">TripAdvisor</div>
+      <div class="partner-logo">Incredible India</div>
+      <div class="partner-logo">GoTravel</div>
+      <div class="partner-logo">Adventure Alliance</div>
+    </section>
+  </main>
+
+  //FOOTER 
+  <footer>
+    <div class="footer-hero">
+      <img
+        src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg"
+        alt="Footer Banner"
+      />
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">BikeTour</div>
+            <p class="footer-text">
+              Happy journeys start with powerful machines, expert guides and
+              a passion for the open road. Join us on our next ride across India.
+            </p>
+          </div>
+
+          <div>
+            <div class="footer-heading">Information</div>
+            <div class="footer-links">
+              <a href="#">About Us</a>
+              <a href="#">FAQ</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Legal</div>
+            <div class="footer-links">
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Refund Policy</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Upcoming Tours</div>
+            <div class="footer-links">
+              <span>Leh – Ladakh Expedition</span>
+              <span>Spiti Valley Circuit</span>
+              <span>South India Coastal Ride</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2025 BikeTour Adventures. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>-->
+</body>
+</html> 
