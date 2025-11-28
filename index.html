@@ -5,22 +5,22 @@
   <title>Bike Tour – Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Reckless Neue from Transfonter -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Montserrat body font -->
+  <!-- Google Font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet"/>
+    rel="stylesheet"
+  />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
   <!-- NAVBAR -->
   <header>
     <nav class="nav">
-      <div class="logo">
-        <span>Bike</span>
-        <span>Tour</span>
-      </div>
+      <div class="logo"><span>Bike</span><span>Tour</span></div>
 
       <div class="nav-links">
         <a href="#">Tours</a>
@@ -32,37 +32,34 @@
 
       <div class="nav-cta">
         <button class="btn-primary">Book Now</button>
-        <div class="hamburger">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
       </div>
     </nav>
   </header>
 
-  <!-- HERO IMAGE -->
+  <!-- HERO SLIDER -->
   <div class="hero-wrapper">
-   <div class="slider">
-  <div class="slides">
-    <img src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg" alt="Image 1" />
-    <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg" alt="Image 2" />
-    <img src="https://images.pexels.com/photos/167676/pexels-photo-167676.jpeg" alt="Image 3" />
+    <div class="slider">
+      <div class="slides">
+        <img src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg" />
+        <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg" />
+        <img src="https://images.pexels.com/photos/167676/pexels-photo-167676.jpeg" />
+      </div>
+
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
   </div>
 
-  <!-- Arrows -->
-  <span class="prev">&#10094;</span>
-  <span class="next">&#10095;</span>
-</div>
-  </div>
-
-  <!-- MAIN PAGE CONTENT -->
+  <!-- MAIN CONTENT -->
   <main class="page page-main">
-    <!-- Intro + Filters -->
+
+    <!-- INTRO -->
     <section class="hero-intro">
       <h1>Best Motorcycle Tour Company in India</h1>
       <p>
-        India Bike Tours is an India based company that has been providing fully guided
-        motorcycle adventure tours for over the past 7 years with our own team of riders
-        and tour leaders.
+        India Bike Tours has been providing fully guided motorcycle adventure tours
+        for 7+ years with professional riders & tour leaders.
       </p>
 
       <div class="filters">
@@ -75,115 +72,75 @@
       </div>
     </section>
 
-    <!-- First Tours Grid -->
+    <!-- TOURS GRID (3 Cards) -->
     <section class="tours-grid">
-      <!-- card 1 -->
+
       <article class="tour-card">
-        <img
-          src="https://images.pexels.com/photos/1226862/pexels-photo-1226862.jpeg"
-          alt="South India Bike Tour"
-        />
+        <img src="https://images.pexels.com/photos/1226862/pexels-photo-1226862.jpeg" />
         <div class="tour-body">
-          <div class="tour-meta">11 Day &amp; 10 Nights</div>
-          <h2 class="tour-title">South India Bike Tour
-             <hr style="background-color: black; width: 270px; height: 5px;position: relative; top: -4px;">
-          </h2>
+          <div class="tour-meta">11 Day & 10 Nights</div>
+          <h2 class="tour-title">South India Bike Tour</h2>
           <p class="tour-location">📍 Kutch / Gujarat</p>
-          <p class="tour-desc">
-            Ride through the beautiful coastlines and ancient temples of South India with our
-            experienced tour guides.
-          </p>
+          <p class="tour-desc">Ride through coastlines, temples & hill stations of South India.</p>
           <div class="tour-footer">
             <div class="tour-price">
               <span class="old">$ 4,650</span>
               <span class="new">$ 5,080</span>
               <span class="per">per person</span>
             </div>
-            <div class="tour-cta">
-              <button class="btn-pill">Book Now</button>
-            </div>
+            <button class="btn-pill">Book Now</button>
           </div>
         </div>
       </article>
 
-      <!-- card 2 -->
       <article class="tour-card">
-        <img
-          src="https://images.pexels.com/photos/1005666/pexels-photo-1005666.jpeg"
-          alt="Nepal Bike Tour"
-        />
+        <img src="https://images.pexels.com/photos/1005666/pexels-photo-1005666.jpeg" />
         <div class="tour-body">
-          <div class="tour-meta">11 Day &amp; 10 Nights</div>
-          <h2 class="tour-title">Nepal Bike Tour
-            <hr style="background-color: black; width: 210px; height: 5px;position: relative; top: -4px;">
-          </h2>
-        
+          <div class="tour-meta">11 Day & 10 Nights</div>
+          <h2 class="tour-title">Nepal Bike Tour</h2>
           <p class="tour-location">📍 Kathmandu / Pokhara</p>
-          <p class="tour-desc">
-            Explore the Himalayas, stunning valleys and ancient cities of Nepal on powerful
-            adventure bikes.
-          </p>
+          <p class="tour-desc">Explore Himalayan valleys & cities of Nepal on adventure bikes.</p>
           <div class="tour-footer">
             <div class="tour-price">
               <span class="old">$ 4,650</span>
               <span class="new">$ 4,080</span>
               <span class="per">per person</span>
             </div>
-            <div class="tour-cta">
-              <button class="btn-pill">Book Now</button>
-            </div>
+            <button class="btn-pill">Book Now</button>
           </div>
         </div>
       </article>
 
-      <!-- card 3 -->
       <article class="tour-card">
-        <img
-          src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg"
-          alt="Rajasthan Bike Tour"
-        />
+        <img src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg" />
         <div class="tour-body">
-          <div class="tour-meta">11 Day &amp; 10 Nights</div>
-          <h2 class="tour-title">Rajasthan Bike Tour
-             <hr style="background-color: black; width: 250px; height: 5px;position: relative; top: -4px;">
-          </h2>
+          <div class="tour-meta">11 Day & 10 Nights</div>
+          <h2 class="tour-title">Rajasthan Bike Tour</h2>
           <p class="tour-location">📍 Jodhpur / Udaipur</p>
-          <p class="tour-desc">
-            Ride across royal deserts, colourful towns and majestic forts of Rajasthan under
-            open skies.
-          </p>
+          <p class="tour-desc">Ride across royal deserts, colourful towns & majestic forts.</p>
           <div class="tour-footer">
             <div class="tour-price">
               <span class="old">$ 4,650</span>
               <span class="new">$ 3,080</span>
               <span class="per">per person</span>
             </div>
-            <div class="tour-cta">
-              <button class="btn-pill">Book Now</button>
-              <span class="badge-green">Season Completed</span>
-            </div>
+            <button class="btn-pill">Book Now</button>
           </div>
         </div>
       </article>
+
     </section>
 
-    <!-- Featured Video Section -->
+    <!-- FEATURE VIDEO -->
     <section class="feature-video">
-      <div class="feature-pattern"></div>
-
       <div class="feature-left">
-        <div class="feature-eyebrow">India Bike Tour Highlight Video</div>
-        <h2 class="feature-title">
-          Embracing the Unknown with India Bike Tour
-          
-        </h2>
+        <div class="feature-eyebrow">Highlight Video</div>
+        <h2 class="feature-title">Embracing the Unknown with India Bike Tour</h2>
         <p class="feature-sub">
-          Watch how our riders conquer changing terrains, connect with
-          local culture and enjoy every second of their adventure.
+          Watch how riders conquer terrains & connect with local culture.
         </p>
         <button class="btn-pill">Book Now</button>
       </div>
-
       <div class="feature-right">
         <div class="video-thumb">
           <div class="video-thumb-inner">
@@ -193,198 +150,110 @@
       </div>
     </section>
 
-    <!-- Second Tours Grid (repeat cards like design) -->
-    <section class="tours-grid">
-      <!-- same three cards again, just for layout -->
-      <article class="tour-card">
-        <img
-          src="https://images.pexels.com/photos/1226862/pexels-photo-1226862.jpeg"
-          alt="South India Bike Tour"
-        />
-        <div class="tour-body">
-          <div class="tour-meta">11 Day &amp; 10 Nights</div>
-          <h2 class="tour-title">South India Bike Tour</h2>
-          <p class="tour-location">📍 Kutch / Gujarat</p>
-          <p class="tour-desc">
-            Scenic beaches, spice plantations and hill stations all packed
-            into one unforgettable ride.
-          </p>
-          <div class="tour-footer">
-            <div class="tour-price">
-              <span class="old">$ 4,650</span>
-              <span class="new">$ 5,080</span>
-              <span class="per">per person</span>
-            </div>
+    <!-- CTA -->
+    <div class="cta-banner">
+      <p>Providing fully guided motorcycle adventure tours across India</p>
+      <button class="btn-pill">Explore Tours</button>
+    </div>
 
-
-<script src="script.js"></script>
-
-  </body>
-</html> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Testimonials -->
-    <!-- <section class="testimonials">
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
       <div class="section-heading">
-        <span>Client Stories</span>
-        <h2>What our riders say</h2>
+        <span>Testimonials</span>
+        <h2>What Our Riders Say</h2>
       </div>
 
       <div class="testimonials-grid">
-        <article class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="avatar">
-              <img
-                src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
-                alt="Client"
-              />
-            </div>
-            <div>
-              <div class="t-name">Claus-Gerhard David</div>
-              <div class="t-role">Germany • Solo Rider</div>
-            </div>
-          </div>
-          <p class="t-text">
-            “It was the perfect mix of adventure, culture and comfort.
-            The team handled every detail and made us feel safe at all times.”
-          </p>
-          <div class="rating">
-            <span class="star">★ ★ ★ ★ ★</span> 4.9 (1,265 reviews)
-          </div>
-        </article>
 
-        <article class="testimonial-card">
+        <div class="testimonial-card">
           <div class="testimonial-header">
-            <div class="avatar">
-              <img
-                src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg"
-                alt="Client"
-              />
-            </div>
+            <img src="https://i.pravatar.cc/150?img=34" />
             <div>
-              <div class="t-name">Michael Brown</div>
-              <div class="t-role">USA • Group Tour</div>
+              <div class="t-name">Amit Sharma</div>
+              <div class="t-role">Rider</div>
             </div>
           </div>
-          <p class="t-text">
-            “Roads, hotels and bikes – everything was superbly organised.
-            Highly recommend India Bike Tour for long distance rides.”
-          </p>
-          <div class="rating">
-            <span class="star">★ ★ ★ ★ ★</span> 4.8
-          </div>
-        </article>
+          <p class="t-text">Amazing experience! The tour guides were very professional.</p>
+          <div class="rating">★★★★★</div>
+        </div>
 
-        <article class="testimonial-card">
+        <div class="testimonial-card">
           <div class="testimonial-header">
-            <div class="avatar">
-              <img
-                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
-                alt="Client"
-              />
-            </div>
+            <img src="https://i.pravatar.cc/150?img=12" />
             <div>
-              <div class="t-name">Priya Sharma</div>
-              <div class="t-role">India • Himalayan Tour</div>
+              <div class="t-name">Sarah Williams</div>
+              <div class="t-role">Traveller</div>
             </div>
           </div>
-          <p class="t-text">
-            “Our guide knew every hidden spot. Sunrises, chai stops and
-            breathtaking passes – unforgettable memories!”
-          </p>
-          <div class="rating">
-            <span class="star">★ ★ ★ ★ ★</span> 5.0
+          <p class="t-text">Best motorcycle tour company I’ve ever used!</p>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.pravatar.cc/150?img=52" />
+            <div>
+              <div class="t-name">Miguel Lopez</div>
+              <div class="t-role">Explorer</div>
+            </div>
           </div>
-        </article>
+          <p class="t-text">Loved the trip. Definitely coming back for another tour.</p>
+          <div class="rating">★★★★★</div>
+        </div>
+
       </div>
     </section>
 
-  Tour Guides //
+    <!-- GUIDES -->
     <section class="guides">
-      <h2>Meet our valuable team<br />Tour Guides</h2>
+      <h2>Meet Our Expert Guides</h2>
 
       <div class="guides-grid">
         <div class="guide-card">
-          <img
-            class="guide-photo"
-            src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
-            alt="Guide"
-          />
-          <div class="guide-name">Sanjay</div>
-          <div class="guide-role">Senior Tour Operator</div>
+          <img class="guide-photo" src="https://i.pravatar.cc/200?img=30" />
+          <div class="guide-name">Rohan Singh</div>
+          <div class="guide-role">Lead Rider</div>
         </div>
+
         <div class="guide-card">
-          <img
-            class="guide-photo"
-            src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
-            alt="Guide"
-          />
-          <div class="guide-name">Pedro Rivera</div>
-          <div class="guide-role">Tour Leader &amp; Rider</div>
+          <img class="guide-photo" src="https://i.pravatar.cc/200?img=20" />
+          <div class="guide-name">Jackson Roy</div>
+          <div class="guide-role">Tour Leader</div>
         </div>
+
         <div class="guide-card">
-          <img
-            class="guide-photo"
-            src="https://images.pexels.com/photos/428364/pexels-photo-428364.jpeg"
-            alt="Guide"
-          />
-          <div class="guide-name">Aman Singh</div>
-          <div class="guide-role">Expedition Specialist</div>
+          <img class="guide-photo" src="https://i.pravatar.cc/200?img=38" />
+          <div class="guide-name">Vikram Patil</div>
+          <div class="guide-role">Road Captain</div>
         </div>
       </div>
     </section>
 
-    //  Partners
+    <!-- PARTNERS -->
     <section class="partners">
       <div class="partner-logo">Royal Enfield</div>
-      <div class="partner-logo">TripAdvisor</div>
-      <div class="partner-logo">Incredible India</div>
-      <div class="partner-logo">GoTravel</div>
-      <div class="partner-logo">Adventure Alliance</div>
+      <div class="partner-logo">Mahindra</div>
+      <div class="partner-logo">TVS</div>
+      <div class="partner-logo">Indian Oil</div>
     </section>
+
   </main>
 
-  //FOOTER 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-hero">
-      <img
-        src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg"
-        alt="Footer Banner"
-      />
+      <img src="https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg" />
     </div>
 
     <div class="footer-main">
       <div class="footer-inner">
+
         <div class="footer-grid">
+
           <div>
             <div class="footer-logo">BikeTour</div>
             <p class="footer-text">
-              Happy journeys start with powerful machines, expert guides and
-              a passion for the open road. Join us on our next ride across India.
+              Happy journeys start with powerful machines and expert guides.
             </p>
           </div>
 
@@ -401,8 +270,8 @@
           <div>
             <div class="footer-heading">Legal</div>
             <div class="footer-links">
-              <a href="#">Terms &amp; Conditions</a>
-              <a href="#">Privacy Policy</a>
+              <a href="#">Terms</a>
+              <a href="#">Privacy</a>
               <a href="#">Refund Policy</a>
             </div>
           </div>
@@ -410,17 +279,24 @@
           <div>
             <div class="footer-heading">Upcoming Tours</div>
             <div class="footer-links">
-              <span>Leh – Ladakh Expedition</span>
-              <span>Spiti Valley Circuit</span>
-              <span>South India Coastal Ride</span>
+              <span>Leh – Ladakh</span>
+              <span>Spiti Valley</span>
+              <span>South India Ride</span>
             </div>
           </div>
+
         </div>
 
         <div class="footer-bottom">
           © 2025 BikeTour Adventures. All rights reserved.
         </div>
+
       </div>
     </div>
-  </footer>-->
+  </footer>
 
+  <!-- JS FILE -->
+  <script src="script.js"></script>
+
+</body>
+</html>

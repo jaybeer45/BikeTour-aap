@@ -15,3 +15,17 @@ document.querySelector(".prev").onclick = () => showSlide(index - 1);
 // setInterval(() => {
 //   showSlide(index + 1);
 // }, 3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
