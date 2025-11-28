@@ -121,7 +121,7 @@ header {
   width: 100%;
 }
 
-.hero-image {
+/* .hero-image {
   width: 96%;
   height: 360px;
   border-radius: 0 0 24px 24px;
@@ -133,7 +133,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 .page-main {
   margin-top: 40px;
@@ -615,9 +615,11 @@ footer {
 .slider {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
   border-radius: 10px;
+  gap: 20px ;
+  
 }
 
 .slides {
@@ -625,12 +627,22 @@ footer {
   width: 300%;
   height: 100%;
   transition: transform 0.6s ease;
+   margin: 0px 20px ;
+  gap: 50px;
+
+
+
 }
 
 .slides img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
+
+
+ 
+ 
 }
 
 /* Arrows */
@@ -646,11 +658,11 @@ footer {
 }
 
 .prev {
-  left: 10px;
+  left: 20px;
 }
 
 .next {
-right:10px;
+right:40px;
 }
 
 /* RESPONSIVE */
