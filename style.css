@@ -702,3 +702,117 @@ right:40px;
 
 }
 
+@media(max-width:480px){
+
+   .nav {
+    padding: 12px 10px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 22px;
+    box-shadow: -4px 0px 12px rgba(0,0,0,0.2);
+    transition: .4s ease;
+    z-index: 9999;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* .hamburger {
+    display: flex;
+    width: 28px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: flex;
+    width: 100%;
+    height: 3px;
+    background: #111;
+    margin: 5px 0;
+  } */
+
+  /* HERO WRAPPER */
+  .hero-wrapper {
+    height: 300px;
+  }
+
+  .slider {
+    height: 300px;
+    display: flex ;
+    gap: 10px;
+    
+  }
+
+  .slides img {
+    width: 400px;
+    height: 260px;
+  }
+
+
+  /* INTRO */
+  .hero-intro h1 {
+    font-size: 32px;
+  }
+
+
+  /* TOUR CARDS */
+  .tours-grid {
+    grid-template-columns: 1fr;
+    padding: 40px 5%;
+  }
+
+
+  /* VIDEO SECTION */
+  .feature-video {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .video-thumb {
+    height: 250px;
+  }
+
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* GUIDES */
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* PARTNERS */
+  .partners {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-hero img{
+     width: 400px;
+     height: 260px;
+     object-fit: cover;
+     margin: 10px 10px;
+     border-radius: 10px;
+  }
+
+}
+
