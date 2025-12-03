@@ -1,6 +1,4 @@
-/* ----------------------------------------------------
-   GLOBAL
----------------------------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,12 +12,9 @@ body {
   line-height: 1.6;
 }
 
-/* ----------------------------------------------------
-   NAVBAR
----------------------------------------------------- */
 .nav {
   width: 100%;
-  padding: 15px 25px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,11 +27,10 @@ body {
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   display: flex;
   gap: 5px;
-  transition: 0.3s;
 }
 
 .nav-links {
@@ -51,7 +45,7 @@ body {
 }
 
 .btn-primary {
-  padding: 10px 18px;
+  padding: 12px 20px;
   background: #ff4d00;
   color: #fff;
   border: none;
@@ -61,26 +55,24 @@ body {
 
 .hamburger {
   display: none;
-  font-size: 30px;
-  cursor: pointer;
 }
 
-/* ----------------------------------------------------
-   HERO SLIDER
----------------------------------------------------- */
 .hero-wrapper {
   margin-top: 90px;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
 }
+
 
 .slider {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 500px;
   overflow: hidden;
   border-radius: 10px;
+  gap: 20px ;
+  
 }
 
 .slides {
@@ -88,6 +80,11 @@ body {
   width: 300%;
   height: 100%;
   transition: transform 0.6s ease;
+   margin: 0px 20px ;
+  gap: 50px;
+
+
+
 }
 
 .slides img {
@@ -95,26 +92,33 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+
+
+ 
+ 
 }
 
-.prev,
-.next {
+
+.prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 35px;
+  font-size: 40px;
   color: white;
   padding: 10px;
   cursor: pointer;
   user-select: none;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+  left: 20px;
+}
 
-/* ----------------------------------------------------
-   HERO INTRO
----------------------------------------------------- */
+.next {
+right:40px;
+}
+
+
 .hero-intro {
   padding: 80px 7%;
   text-align: center;
@@ -147,9 +151,7 @@ body {
   border-color: #ff4d00;
 }
 
-/* ----------------------------------------------------
-   TOUR CARDS
----------------------------------------------------- */
+
 .tours-grid {
   padding: 50px 7%;
   display: grid;
@@ -170,15 +172,24 @@ body {
   object-fit: cover;
 }
 
-.tour-body { padding: 20px; }
+.tour-body {
+  padding: 20px;
+}
 
 .tour-title {
   font-size: 22px;
   margin-bottom: 10px;
 }
 
-.tour-location { color: #666; }
-.tour-desc { margin: 20px 0; color: #444; }
+.tour-location {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tour-desc {
+  margin-bottom: 20px;
+  color: #444;
+}
 
 .tour-footer {
   display: flex;
@@ -189,15 +200,16 @@ body {
 .btn-pill {
   padding: 10px 22px;
   background: #ff4d00;
-  color: #fff;
+  color: white;
   border-radius: 50px;
   border: none;
   cursor: pointer;
 }
 
-/* ----------------------------------------------------
-   FEATURE VIDEO
----------------------------------------------------- */
+.tour-price span {
+  display: block;
+}
+
 .feature-video {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -206,132 +218,373 @@ body {
   gap: 40px;
 }
 
+.feature-eyebrow {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #ff4d00;
+  font-weight: 600;
+}
+
+.feature-title {
+  font-size: 35px;
+  margin: 15px 0;
+}
+
+.feature-sub {
+  margin-bottom: 25px;
+}
+
 .video-thumb {
   width: 100%;
   height: 350px;
+  background: url("https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg")
+    center/cover;
   border-radius: 12px;
-  background: url("https://images.pexels.com/photos/2403205/pexels-photo-2403205.jpeg") center/cover;
+  position: relative;
 }
 
 .play-circle {
   width: 80px;
   height: 80px;
   background: #ffffff90;
-  border: 5px solid #fff;
   border-radius: 50%;
+  margin: auto;
+  border: 5px solid #fff;
 }
 
-/* ----------------------------------------------------
-   CTA BANNER
----------------------------------------------------- */
+.video-thumb-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .cta-banner {
   background: #ff4d00;
   padding: 50px 20px;
   text-align: center;
   color: #fff;
+  margin-top: 40px;
 }
 
-/* ----------------------------------------------------
-   TESTIMONIALS, GUIDES, PARTNERS, FOOTER
-   (unchanged—kept stable)
----------------------------------------------------- */
+.cta-banner p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
-/* ----------------------------------------------------
-   RESPONSIVE FIXES
----------------------------------------------------- */
+.testimonials {
+  padding: 70px 7%;
+  background: #fafafa;
+}
 
-/* ---------- Tablets (≤ 768px) ---------- */
-@media (max-width: 768px) {
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-  .logo {
-    font-size: 22px;
+.section-heading span {
+  color: #ff4d00;
+  font-weight: 600;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.testimonial-header img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.t-name {
+  font-weight: 700;
+}
+
+.t-role {
+  font-size: 13px;
+  color: #666;
+}
+
+.rating {
+  margin-top: 15px;
+  color: gold;
+  font-size: 18px;
+}
+
+.guides {
+  padding: 70px 7%;
+  text-align: center;
+}
+
+.guides h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.guide-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.guide-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.guide-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.guide-role {
+  color: #555;
+  margin-top: 4px;
+}
+
+
+.partners {
+  padding: 60px 7%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.partner-logo {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 12px 25px;
+  border: 2px solid #ff4d00;
+  color: #ff4d00;
+  border-radius: 6px;
+}
+
+
+.footer-hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.footer-main {
+  background: #111;
+  color: #ddd;
+  padding: 60px 7%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.footer-heading {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-links a,
+.footer-links span {
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #bbb;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  color: #aaa;
+} 
+
+
+@media (max-width:1280px) {
+  .nav {
+    padding: 16px 30px;
   }
+  .hero-wrapper {
+    height: 70vh;
+  }
+  .feature-video {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width:1024px) {
 
   .nav {
-    padding: 12px 18px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
+    padding: 14px 25px;
   }
 
   .hero-wrapper {
-    height: 50vh;
-    margin-top: 65px;
+    height: 60vh;
   }
 
   .slider {
-    height: 260px;
-  }
-
-  .hero-intro h1 {
-    font-size: 28px;
-  }
-
-  .tours-grid {
-    grid-template-columns: 1fr 1fr;
+    height: 420px;
   }
 
   .feature-video {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
+  .video-thumb {
+    height: 300px;
+    margin-top: 25px;
+  }
+
+  .partners {
+    gap: 20px;
+  }
 }
 
-/* ---------- Mobile Phones (≤ 480px) ---------- */
-@media (max-width: 480px) {
+@media (max-width:768px) {
 
-  .logo {
+  /* NAVBAR */
+  .nav {
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 22px;
+    box-shadow: -4px 0px 12px rgba(0,0,0,0.2);
+    transition: .4s ease;
+    z-index: 9999;
+  }
+
+  .nav-links a {
     font-size: 18px;
   }
 
-  .nav {
-    padding: 10px 15px;
+  .nav-links.active {
+    right: 0;
   }
 
-  .nav-links.mobile-active {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    position: absolute;
-    top: 60px;
-    right: 0;
+  .hamburger {
+    display: block;
+    width: 28px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
     width: 100%;
-    background: #fff;
-    padding: 20px 0;
-    border-top: 1px solid #eee;
-    text-align: center;
+    height: 3px;
+    background: #111;
+    margin: 5px 0;
+  }
+
+  /* HERO WRAPPER */
+  .hero-wrapper {
+    height: 380px;
   }
 
   .slider {
-    height: 220px;
+    height: 350px;
   }
 
-  .prev, .next {
-    font-size: 24px;
+
+  /* INTRO */
+  .hero-intro h1 {
+    font-size: 32px;
   }
 
-  .hero-intro {
+
+  /* TOUR CARDS */
+  .tours-grid {
+    grid-template-columns: 1fr;
     padding: 40px 5%;
   }
 
-  .hero-intro h1 {
-    font-size: 22px;
-  }
 
-  .tours-grid {
+  /* VIDEO SECTION */
+  .feature-video {
     grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 5%;
   }
 
   .video-thumb {
-    height: 220px;
+    height: 250px;
   }
 
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* GUIDES */
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* PARTNERS */
+  .partners {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  /* FOOTER */
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
 }
+
